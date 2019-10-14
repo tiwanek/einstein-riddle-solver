@@ -21,7 +21,7 @@ object DSLApplication extends App {
     def chimney: Item = Item(value, Types.Chimney.id)
   }
 
-  def ship = riddleRow
+  def ship = riddleSubject
 
   implicit val builder: EinsteinRiddleBuilder = new EinsteinRiddleBuilder(types = 5, length = 5)
 

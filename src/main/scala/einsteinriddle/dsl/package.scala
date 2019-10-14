@@ -41,7 +41,7 @@ package object dsl {
 
   class OnDSL(itemDSL: ItemDSL) {
     def position(value: Int)(implicit builder: EinsteinRiddleBuilder): Unit = {
-      assert(itemDSL.toSeq.size == 1)
+      assert(itemDSL.toSeq.size == 1) // TODO: block by DSL...
       builder.addPuzzle(PlacedPuzzle(
         itemDSL.toSeq.head,
         value - 1
@@ -89,6 +89,5 @@ package object dsl {
   }
 
   def where: WhereDSL = new WhereDSL()
-  def rowType(`type`: Int): (String => Item) = value => Item(value, `type`)
-  def riddleRow: RowDSL = new RowDSL()
+  def riddleSubject: RowDSL = new RowDSL()
 }
