@@ -13,19 +13,11 @@ object DSLApplication extends App {
     val Chimney = Value(4)
   }
 
-  implicit class Country(value: String) {
+  implicit class TypesLift(value: String) {
     def country: Item = Item(value, Types.Country.id)
-  }
-  implicit class Hour(value: String) {
     def hour: Item = Item(value, Types.Hour.id)
-  }
-  implicit class Cargo(value: String) {
     def cargo: Item = Item(value, Types.Cargo.id)
-  }
-  implicit class Destination(value: String) {
     def destination: Item = Item(value, Types.Destination.id)
-  }
-  implicit class Chimney(value: String) {
     def chimney: Item = Item(value, Types.Chimney.id)
   }
 
