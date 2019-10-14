@@ -27,11 +27,11 @@ class EinsteinRiddleSolver(length: Int, types: Int, inputPuzzles: Seq[Puzzle]) {
     restOfPuzzles: Seq[Puzzle]
   ): Option[Solution] = {
     if (index >= combinations) {
-      println(s"No more solutions for ${puzzle}")
+      // println(s"No more solutions for ${puzzle}")
       None
     } else {
-      println(solution)
-      println(s"Applying ${index + 1} out of ${combinations} for ${puzzle}")
+      // println(solution)
+      // println(s"Applying ${index + 1} out of ${combinations} for ${puzzle}")
       val applied = puzzle.applySolutionWithNumber(solution, index)
       assert(applied.isDefined)
       val newSolution = applied.get
